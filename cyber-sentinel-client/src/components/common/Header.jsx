@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../contexts/AuthContext';
+import { LogOut } from 'lucide-react';
 
 const Header = () => {
   const [currentTime, setCurrentTime] = useState('');
+  const { isAuthenticated, logout } = useAuth();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setInterval(() => {
-      // Simulate the date for consistency with the demo
-      const now = new Date('2025-09-19T21:54:00');
-      now.setSeconds(now.getSeconds() + (Date.now() / 1000) % 60); // Make it tick
+      const now = new Date();
       setCurrentTime(now.toLocaleString('en-US', {
         weekday: 'long',
         year: 'numeric',
@@ -21,6 +24,11 @@ const Header = () => {
     return () => clearInterval(timer);
   }, []);
 
+  const handleLogout = () => {
+    logout(); // This clears the token from localStorage and our context
+    navigate('/login'); // Redirect the user to the login page
+  };
+
   return (
     <header>
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
@@ -30,7 +38,18 @@ const Header = () => {
         </div>
         <div className="text-right mt-4 sm:mt-0">
           <p className="text-lg font-medium text-text-primary">{currentTime}</p>
-          <p className="text-sm text-text-secondary">Last Login: Admin</p>
+          <div className="flex items-center justify-end gap-4 mt-1">
+            <p className="text-sm text-text-secondary">Welcome, Admin</p>
+            {isAuthenticated && (
+              <button
+                onClick={handleLogout}
+                className="flex items-center text-sm text-red-400 hover:text-red-500 transition-colors"
+              >
+                <LogOut size={16} className="mr-1" />
+                Logout
+              </button>
+            )}
+          </div>
           <p className="text-lg font-semibold text-green-400 flex items-center justify-end mt-1">
             <span className="w-3 h-3 bg-green-500 rounded-full mr-2 animate-pulse"></span>
             SYSTEM STATUS: SECURE
@@ -42,3 +61,4 @@ const Header = () => {
 };
 
 export default Header;
+

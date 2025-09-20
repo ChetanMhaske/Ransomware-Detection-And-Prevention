@@ -18,6 +18,19 @@ const alertSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  status: {
+    type: String,
+    required: true,
+    enum: ['new', 'resolved'],
+    default: 'new',
+  },
+  resolvedAt: {
+    type: Date,
+  },
+  resolvedBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+  },
   action_taken: {
     type: String,
     required: true,

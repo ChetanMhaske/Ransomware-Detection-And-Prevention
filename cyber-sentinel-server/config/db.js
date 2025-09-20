@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 
-dotenv.config();
+dotenv.config({ path: './cyber-sentinel-server/.env' });
 
 const connectDB = async () => {
   try {
