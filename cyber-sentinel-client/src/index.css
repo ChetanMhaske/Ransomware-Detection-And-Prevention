@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-base-100 text-text-primary antialiased; /* Updated text color */
+  font-family: 'Inter', sans-serif;
+}
