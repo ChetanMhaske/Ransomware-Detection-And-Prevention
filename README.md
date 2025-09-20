@@ -156,10 +156,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Designed for cybersecurity professionals and researchers
 - Implements industry best practices for security and scalability
 
-## 📞 Support
-
-For support, email your-email@example.com or create an issue in this repository.
-
----
-
-**⚠️ Disclaimer**: This is a cybersecurity research and educational project. Use responsibly and in accordance with applicable laws and regulations.
