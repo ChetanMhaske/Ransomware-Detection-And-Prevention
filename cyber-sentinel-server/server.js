@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 dotenv.config(); // Correctly placed at the top
 
+import metricsRoutes from './routes/metricsRoutes.js'; // 1. Import metrics routes
 import express from 'express';
 import cors from 'cors';
 import connectDB from './config/db.js';
@@ -23,6 +24,7 @@ app.use('/api/alerts', alertRoutes);
 app.use('/api/logs', logRoutes);
 app.use('/api/predict', predictRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/metrics', metricsRoutes); // 2. Use metrics routes
 
 const PORT = process.env.PORT || 5000;
 

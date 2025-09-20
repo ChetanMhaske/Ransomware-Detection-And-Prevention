@@ -64,3 +64,9 @@ export const registerUser = (userData) => {
 export const analyzeNetworkTraffic = (trafficData) => {
   return apiClient.post('/predict/network', trafficData);
 };
+
+
+// --- Add this new function for Metrics ---
+export const getMetrics = () => {
+  return apiClient.get('/metrics/response-time');
+};
