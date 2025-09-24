@@ -110,14 +110,6 @@ MODEL_PATH=./models/
 DATA_PATH=./data/
 ```
 
-## 🌟 Features
-
-- **Real-time Monitoring**: Live network traffic analysis and threat detection
-- **Machine Learning**: Advanced ML models for ransomware pattern recognition
-- **Interactive Dashboard**: Modern web interface with real-time updates
-- **API Integration**: RESTful APIs connecting all components
-- **Scalable Architecture**: Microservices-based design for easy scaling
-
 ## 🛡️ Security Features
 
 - JWT-based authentication
