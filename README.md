@@ -57,34 +57,6 @@ pip install -r requirements.txt
 python app.py
 ```
 
-## 📁 Project Structure
-
-```
-Ransomware-Detection-And-Prevention/
-├── cyber-sentinel-client/          # React frontend
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   └── hooks/
-│   ├── public/
-│   └── package.json
-├── cyber-sentinel-server/          # Node.js backend
-│   ├── src/
-│   │   ├── controllers/
-│   │   ├── models/
-│   │   ├── routes/
-│   │   └── services/
-│   └── package.json
-├── cyber-sentinel-ml/              # Python ML service
-│   ├── models/
-│   ├── data/
-│   ├── notebooks/
-│   ├── app.py
-│   └── requirements.txt
-└── README.md
-```
-
 ## 🔧 Configuration
 
 ### Environment Variables
