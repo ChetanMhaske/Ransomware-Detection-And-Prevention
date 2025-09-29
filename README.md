@@ -106,11 +106,6 @@ DATA_PATH=./data/
 - Historical data analysis
 - Custom reporting dashboard
 
-
-## 👥 Authors
-
-- **Chetan Mhaske** - *Initial work* - [GitHub](https://github.com/ChetanMhaske) | [LinkedIn](https://www.linkedin.com/in/chetanmhaske)
-
 ## 🙏 Acknowledgments
 
 - Built with modern web technologies for optimal performance
